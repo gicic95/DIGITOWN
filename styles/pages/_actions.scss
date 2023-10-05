@@ -1,0 +1,81 @@
+.actionsPage {
+  padding: 10px 0 60px 0;
+  @include media-max($bp-xs) {
+    padding: 30px 0;
+  }
+  .container {
+    h1 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+      line-height: 16px;
+    }
+    .cards {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      //justify-items: space-between;
+      grid-gap: 50px;
+      @include media-max($bp-xl) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+      }
+      @include media-max($bp-lg) {
+        grid-gap: 20px;
+      }
+      @include media-max($bp-md) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include media-max($bp-sm) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+      }
+      @include media-max($bp-xs) {
+        grid-template-columns: 100%;
+        margin-top: 20px;
+      }
+      .card {
+        .img {
+          height: 420px;
+          position: relative;
+          img {
+            margin: 0 auto;
+            width: auto !important;
+            //height: auto !important;
+            border-radius: $border-radius;
+            overflow: hidden;
+            @include media-max($bp-sm) {
+              width: 100% !important;
+            }
+          }
+          @include media-max($bp-sm) {
+            height: 400px;
+          }
+        }
+        p {
+          font-weight: 600;
+          font-size: 18px;
+          text-align: center;
+          margin-top: 10px;
+          @include media-max($bp-sm) {
+            font-size: 14px;
+            text-align: start;
+          }
+        }
+        a {
+          display: none;
+        }
+        @include media-max($bp-sm) {
+          a {
+            display: block;
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}

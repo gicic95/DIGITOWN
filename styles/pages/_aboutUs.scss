@@ -1,0 +1,73 @@
+.aboutUsPage {
+  padding-bottom: 60px;
+  @include media-max($bp-sm) {
+    padding-bottom: 0;
+  }
+  .container {
+    h1 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .content {
+      display: flex;
+      gap: 80px;
+      flex-wrap: wrap;
+      @include media-max($bp-sm) {
+        gap: 10px;
+      }
+      .left {
+        width: 78%;
+        @include media-max($bp-sm) {
+          width: 100%;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 400;
+        }
+        .info {
+          margin-top: 60px;
+          @include media-max($bp-sm) {
+            margin-top: 10px;
+          }
+          h3 {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 27px;
+            //margin-bottom: 20px;
+          }
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+      .right {
+        @include media-max($bp-sm) {
+          text-align: center;
+          width: 100%;
+        }
+        .text {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .number {
+          font-size: 50px;
+          font-weight: 600;
+          line-height: 50px;
+
+          //padding: 0;
+
+          //display: inline-block;
+
+          &.red {
+            color: #eb605e;
+          }
+          &.blue {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

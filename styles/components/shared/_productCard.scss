@@ -1,0 +1,189 @@
+.productContainer {
+  flex: 1;
+  .productCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    height: 460px;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid $color-light;
+    border-radius: $border-radius $border-radius 0 0;
+    display: grid;
+    grid-template-rows: 1fr 125px;
+    background-color: white;
+    @include media-max($bp-sm) {
+      height: 460px;
+      padding: 0 10px;
+      grid-template-rows: auto;
+    }
+    .top {
+      position: relative;
+      // @include media-max($bp-sm) {
+      //   width: 90%;
+      //   margin: 0 10px;
+      // }
+      .heartIcon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        @include media-max($bp-sm) {
+          top: 8px;
+          right: 8px;
+        }
+        path {
+          fill: $color-text-secondary;
+        }
+      }
+      .sticker {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        @include media-max($bp-sm) {
+          left: 0;
+          img {
+            height: 45px;
+            width: 45px;
+          }
+        }
+        // img{
+        //   height: 50px;
+        // }
+      }
+      .catalogStickers {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        @include media-max($bp-sm) {
+          top: 35px;
+        }
+
+        img {
+          display: block;
+          margin-bottom: 5px;
+          @include media-max($bp-sm) {
+            height: 45px;
+            width: 45px;
+          }
+        }
+      }
+      .photo {
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 30px 10px 30px;
+
+        @include flexCenter;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // margin: 20px auto;
+        // @include flexCenter;
+        @include media-max($bp-sm) {
+          margin: 0 auto;
+          width: 100%;
+        }
+        img {
+          // width: auto !important;
+          // height: 140px;
+          height: auto !important;
+          //max-width: 390px;
+          //max-height: 200px;
+          @include media-max($bp-sm) {
+            width: 100%;
+          }
+        }
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        word-break: break-all;
+        height: 40px;
+        margin-bottom: 20px;
+
+        @include media-max($bp-sm) {
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+    .bottom {
+      position: relative;
+
+      .badgeHolder {
+        height: 30px;
+        .badge {
+          font-size: 10px;
+        }
+      }
+      .prices {
+        //margin: 5px 0 10px 0;
+        .pricesTop {
+          padding-bottom: 10px;
+          border-bottom: 1px solid $color-light;
+          p {
+            font-size: 18px;
+            line-height: 20px;
+            color: $color-black;
+            @include media-max($bp-sm) {
+              font-size: 15px;
+            }
+            &.retail {
+              text-decoration: line-through;
+            }
+          }
+
+          h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            @include media-max($bp-sm) {
+              font-size: 18px;
+            }
+          }
+        }
+        .pricesBottom {
+          @include flexAlign;
+          gap: 15px;
+          margin-top: 10px;
+
+          @include media-max($bp-sm) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+          }
+          h4 {
+            font-size: 13px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-black;
+
+            &.retail {
+              text-decoration: line-through;
+            }
+          }
+          .saving {
+            font-weight: bold;
+            @include media-max($bp-sm) {
+              font-size: 12px;
+              line-height: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}

@@ -1,0 +1,43 @@
+.noFoundPage {
+  height: 65vh;
+  @include media-max($bp-sm) {
+    min-height: 530px;
+  }
+  .centered {
+    align-items: center;
+    text-align: center;
+    max-width: 35%;
+    margin: auto;
+    @include media-max($bp-xxl) {
+      max-width: 45%;
+    }
+    @include media-max($bp-lg) {
+      max-width: 42%;
+    }
+    @include media-max($bp-sm) {
+      max-width: 80%;
+      margin-top: 40px;
+    }
+    img {
+      @include media-max($bp-sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    h2 {
+      font-size: 18px;
+      margin: 40px 0 10px 0;
+    }
+    p {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    a {
+      margin: 0 auto;
+      width: 40%;
+      @include media-max($bp-sm) {
+        width: 80%;
+      }
+    }
+  }
+}

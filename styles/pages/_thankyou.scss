@@ -1,0 +1,61 @@
+.thankyouPage {
+  height: 70vh;
+  @include flexCenter;
+
+  .innerContainer {
+    width: 80%;
+    max-width: 1000px;
+    @include flexAlign;
+    //flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    @include media-max($bp-xs) {
+      flex-wrap: wrap;
+      gap: 5px;
+      text-align: center;
+
+      .logo img {
+        height: 150px;
+        width: auto;
+      }
+    }
+
+    h3 {
+      font-size: 44px;
+      color: #eb605e;
+      font-weight: 700;
+      @include media-max($bp-xs) {
+        font-size: 32px;
+        text-align: center;
+      }
+    }
+
+    .congrats {
+      //text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+      @include media-max($bp-xs) {
+        font-size: 14px;
+      }
+    }
+    .text {
+      font-size: 16px;
+      margin-bottom: 30px;
+      @include media-max($bp-xs) {
+        font-size: 12px;
+      }
+    }
+
+    a {
+      width: 35%;
+      font-size: 14px;
+      @include media-max($bp-xs) {
+        padding: 6px 10px;
+        font-size: 13px;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
